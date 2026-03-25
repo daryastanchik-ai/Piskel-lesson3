@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Урок 3: Piskel и Нян-кэт</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="bg-glow blob-1"></div>
+<div class="bg-glow blob-2"></div>
+
+<div class="presentation-container">
+    
+    <div class="slide active flex-center" id="slide-1">
+        <div class="badge blue">Урок 3</div>
+        <h1 class="title-gradient">Пиксельный Нян-кэт</h1>
+        <p class="subtitle">Сегодня мы нарисуем вот такого легендарного котика! 🌌</p>
+        
+        <div class="mt-10">
+            <img src="img/nyan_cat_final.png" alt="Итоговый Нян-кэт" style="width: 500px; image-rendering: pixelated; border-radius: 12px; box-shadow: var(--shadow-soft); border: 4px solid #fff;">
+        </div>
+    </div>
+
+    <div class="slide flex-center" id="slide-2">
+        <div class="badge blue">План урока</div>
+        <h2>Что мы будем сегодня делать?</h2>
+        
+        <div class="grid-cards mt-20" style="grid-template-columns: repeat(3, 1fr); width: 100%;">
+            <div class="info-card eq-card">
+                <div class="card-icon">📐</div>
+                <h3>Новый размер</h3>
+                <p>Установим размер холста 45x32, чтобы котику хватило места.</p>
+            </div>
+            <div class="info-card eq-card">
+                <div class="card-icon">🖼️</div>
+                <h3>Рисование</h3>
+                <p>Построим кота по частям, повторяя за преподавателем.</p>
+            </div>
+            <div class="info-card eq-card">
+                <div class="card-icon">📁</div>
+                <h3>Сохранение</h3>
+                <p>Сохраним проект в браузере и на компьютер.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="slide flex-center" id="slide-3">
+        <div class="badge orange">Вспоминаем 1/3</div>
+        <h2>Цвета и Эмоции 🎨</h2>
+        <p class="theory-text">На прошлом уроке мы рисовали смайлики.</p>
+        
+        <div class="info-card mt-20 text-center w-100" style="padding: 40px; border-left: 8px solid var(--accent-yellow);">
+            <p style="font-size: 1.5rem; font-weight: bold; color: var(--text-main);">Каким цветом, например, можно нарисовать РАДОСТЬ?<br><br>А какую эмоцию мы можем передать с помощью СИНЕГО цвета?</p>
+        </div>
+        
+        <button class="btn-outline mt-20" onclick="document.getElementById('warmup-1').style.display='block'; this.style.display='none';">Показать ответы 👀</button>
+        <div id="warmup-1" style="display: none; margin-top: 20px; text-align: center;">
+            <div class="badge" style="background: #FEF08A; color: #B45309; font-size: 1.3rem; padding: 10px 20px; margin-bottom: 10px;">ЖЕЛТЫЙ — Радость и веселье 😄</div><br>
+            <div class="badge blue" style="font-size: 1.3rem; padding: 10px 20px;">СИНИЙ — Грусть или спокойствие 🥶</div>
+        </div>
+    </div>
+
+    <div class="slide flex-center" id="slide-4">
+        <div class="badge orange">Вспоминаем 2/3</div>
+        <h2>Волшебная кнопка спасения 🪄</h2>
+        <p class="theory-text">В Piskel легко случайно закрасить не тот пиксель или промахнуться Заливкой.</p>
+        
+        <div class="info-card mt-20 text-center w-100" style="padding: 40px; border-left: 8px solid var(--accent-yellow);">
+            <p style="font-size: 1.5rem; font-weight: bold; color: var(--text-main);">Какое сочетание клавиш на клавиатуре нужно нажать, чтобы ОТМЕНИТЬ последнее действие (сделать шаг назад)?</p>
+        </div>
+        
+        <button class="btn-outline mt-20" onclick="document.getElementById('warmup-2').style.display='block'; this.style.display='none';">Показать ответ 👀</button>
+        <div id="warmup-2" style="display: none; margin-top: 20px;">
+            <div class="badge purple" style="font-size: 1.8rem; padding: 10px 30px;">CTRL + Z</div>
+        </div>
+    </div>
+
+    <div class="slide flex-center" id="slide-5">
+        <div class="badge orange">Вспоминаем 3/3</div>
+        <h2>Идеально ровные формы ⚪</h2>
+        <p class="theory-text">Мы учились рисовать ровное лицо для смайлика.</p>
+        
+        <div class="info-card mt-20 text-center w-100" style="padding: 40px; border-left: 8px solid var(--accent-yellow);">
+            <p style="font-size: 1.5rem; font-weight: bold; color: var(--text-main);">Какую кнопку на клавиатуре нужно ЗАЖАТЬ и держать, пока мы тянем инструмент "Круг", чтобы он получился идеально ровным?</p>
+        </div>
+        
+        <button class="btn-outline mt-20" onclick="document.getElementById('warmup-3').style.display='block'; this.style.display='none';">Показать ответ 👀</button>
+        <div id="warmup-3" style="display: none; margin-top: 20px;">
+            <div class="badge pink" style="font-size: 1.8rem; padding: 10px 30px;">SHIFT</div>
+        </div>
+    </div>
+
+    <div class="slide flex-center" id="slide-6">
+        <div class="badge purple">Настройка</div>
+        <h2>Меняем размер холста 📐</h2>
+        <p class="theory-text">Делаем холст прямоугольным, чтобы коту хватило места для полета.</p>
+        
+        <div class="info-card mt-10 w-100" style="display: flex; gap: 30px; align-items: center; padding: 20px; border-left: 8px solid var(--accent-purple); background: #fff;">
+            <div style="flex: 1; text-align: left;">
+                <ul class="custom-list" style="font-size: 1.2rem; line-height: 1.6; margin: 0;">
+                    <li>Нажмите на иконку <b>Resize</b> справа.</li>
+                    <li>Снимите галочку <b>Maintain aspect ratio</b>.</li>
+                    <li>Ширина <b>(Width) — 45</b></li>
+                    <li>Высота <b>(Height) — 32</b></li>
+                    <li>Нажмите желтую кнопку Resize.</li>
+                </ul>
+            </div>
+            <div style="flex: 1.5; display: flex; justify-content: center;">
+                <img src="img/step_resize.png" alt="Скриншот меню Resize" style="width: 100%; max-height: 350px; object-fit: contain; border-radius: 8px;">
+            </div>
+        </div>
+    </div>
+
+    <div class="slide flex-center" id="slide-7">
+        <div class="badge pink">Шаг 1</div>
+        <h2>Контур: Мордочка 🐱</h2>
+        <p class="theory-text">Внимательно смотрим на цифры-подсказки!</p>
+        
+        <div class="info-card mt-10 w-100" style="display: flex; gap: 30px; align-items: center; padding: 20px; border-left: 8px solid var(--accent-pink); background: #fff;">
+            <div style="flex: 1; text-align: left;">
+                <p style="font-size: 1.3rem; font-weight: bold; margin-top: 0;">Рисуем Карандашом:</p>
+                <ul class="custom-list" style="font-size: 1.2rem; line-height: 1.6; margin: 0;">
+                    <li>На картинке белыми цифрами указано, какой длины должны быть линии.</li>
+                    <li>Отступите место слева (там будет радуга).</li>
+                    
+                </ul>
+            </div>
+            <div style="flex: 1.5; display: flex; justify-content: center;">
+                <img src="img/step1_head.png" alt="Скриншот Шаг 1: Голова" style="width: 100%; max-height: 350px; object-fit: contain; border-radius: 8px; image-rendering: pixelated;">
+            </div>
+        </div>
+    </div>
+
+    <div class="slide flex-center" id="slide-8">
+        <div class="badge pink">Шаг 2</div>
+        <h2>Контур: Тело-печенька 🍪</h2>
+        <p class="theory-text">Добавляем большое туловище прямо за головой.</p>
+        
+        <div class="info-card mt-10 w-100" style="display: flex; gap: 30px; align-items: center; padding: 20px; border-left: 8px solid var(--accent-pink); background: #fff;">
+            <div style="flex: 1; text-align: left;">
+                <p style="font-size: 1.3rem; font-weight: bold; margin-top: 0;">Рисуем Карандашом:</p>
+                <ul class="custom-list" style="font-size: 1.2rem; line-height: 1.6; margin: 0;">
+                    <li>Смотрите на цифры-подсказки, чтобы тело получилось ровным.</li>
+                    <li>Слегка закруглите углы у прямоугольника.</li>
+                </ul>
+                <div style="background: #FEF2F2; padding: 10px; border-radius: 8px; border: 1px solid #FCA5A5; margin-top: 15px;">
+                    <p style="font-size: 1rem; margin: 0; color: #991B1B;">⚠️ Проверьте, чтобы линии были плотно замкнуты, иначе Заливка выльется за края!</p>
+                </div>
+            </div>
+            <div style="flex: 1.5; display: flex; justify-content: center;">
+                <img src="img/step2_body.png" alt="Скриншот Шаг 2: Тело" style="width: 100%; max-height: 350px; object-fit: contain; border-radius: 8px; image-rendering: pixelated;">
+            </div>
+        </div>
+    </div>
+
+    <div class="slide flex-center" id="slide-9">
+        <div class="badge pink">Шаг 3</div>
+        <h2>Контур: Лапки и Хвостик 🐾</h2>
+        <p class="theory-text">Завершаем каркас нашего персонажа.</p>
+        
+        <div class="info-card mt-10 w-100" style="display: flex; gap: 30px; align-items: center; padding: 20px; border-left: 8px solid var(--accent-pink); background: #fff;">
+            <div style="flex: 1; text-align: left;">
+                <p style="font-size: 1.3rem; font-weight: bold; margin-top: 0;">Рисуем Карандашом:</p>
+                <ul class="custom-list" style="font-size: 1.2rem; line-height: 1.6; margin: 0;">
+                    <li>Снизу нарисуйте 4 короткие лапки, ориентируясь на подсказки.</li>
+                    <li>Сзади добавьте маленький хвостик.</li>
+                    <li>Наш контур полностью готов к покраске!</li>
+                </ul>
+            </div>
+            <div style="flex: 1.5; display: flex; justify-content: center;">
+                <img src="img/step3_paws.png" alt="Скриншот Шаг 3: Лапки" style="width: 100%; max-height: 350px; object-fit: contain; border-radius: 8px; image-rendering: pixelated;">
+            </div>
+        </div>
+    </div>
+
+    <div class="slide flex-center" id="slide-10">
+        <div class="badge blue">Шаг 4</div>
+        <h2>Цвет и детали 🪣</h2>
+        <p class="theory-text">Берем Заливку и раскрашиваем нашего героя.</p>
+        
+        <div class="info-card mt-10 w-100" style="display: flex; gap: 30px; align-items: center; padding: 20px; border-left: 8px solid var(--accent-blue); background: #fff;">
+            <div style="flex: 1; text-align: left;">
+                <ul class="custom-list" style="font-size: 1.15rem; line-height: 1.5; margin: 0;">
+                    <li><b>Заливка:</b> Края тела — бежевые, серединка — розовая.</li>
+                    <li><b>Заливка:</b> Голова, лапки и хвост — светло-серые.</li>
+                    <li><b>Карандаш:</b> Глазки, носик и щечки. Точки-посыпка на глазури.</li>
+                    <li style="color: var(--accent-pink); font-weight: bold; margin-top: 15px;">💡 Хочешь кота-арбуза или шоколадного? Смело экспериментируй с цветами!</li>
+                </ul>
+            </div>
+            <div style="flex: 1.5; display: flex; justify-content: center;">
+                <img src="img/step4_color.png" alt="Скриншот Шаг 4: Цвет" style="width: 100%; max-height: 350px; object-fit: contain; border-radius: 8px; image-rendering: pixelated;">
+            </div>
+        </div>
+    </div>
+
+    <div class="slide flex-center" id="slide-11">
+        <div class="badge green">Шаг 5</div>
+        <h2>Радужный след 🌈</h2>
+        <p class="theory-text">Запускаем двигатель! Тянем линии до левого края.</p>
+        
+        <div class="info-card mt-10 w-100" style="display: flex; gap: 30px; align-items: center; padding: 20px; border-left: 8px solid var(--accent-green); background: #fff;">
+            <div style="flex: 1; text-align: left;">
+                <p style="font-size: 1.3rem; font-weight: bold; margin-top: 0;">Рисуем Карандашом:</p>
+                <ul class="custom-list" style="font-size: 1.2rem; line-height: 1.6; margin: 0;">
+                    <li>Красный</li>
+                    <li>Оранжевый</li>
+                    <li>Желтый</li>
+                    <li>Зеленый</li>
+                    <li>Голубой</li>
+                    <li>Фиолетовый</li>
+                </ul>
+            </div>
+            <div style="flex: 1.5; display: flex; justify-content: center;">
+                <img src="img/step5_rainbow.png" alt="Скриншот Шаг 5: Радуга" style="width: 100%; max-height: 350px; object-fit: contain; border-radius: 8px; image-rendering: pixelated;">
+            </div>
+        </div>
+    </div>
+
+    <div class="slide flex-center" id="slide-12">
+        <div class="badge red">Сохранение 1/2</div>
+        <h1 class="title-gradient" style="font-size: 3.5rem;">Сохраняем в браузере</h1>
+        <p class="theory-text">Сохраняем работу прямо внутри программы Piskel.</p>
+        
+        <div class="info-card mt-10 w-100" style="display: flex; gap: 30px; align-items: center; padding: 20px; border-left: 8px solid #EF4444; background: #fff;">
+            <div style="flex: 1; text-align: left;">
+                <ol class="custom-list" style="font-size: 1.2rem; line-height: 1.6; margin: 0;">
+                    <li>Нажми на иконку <b>Save</b> в меню справа.</li>
+                    <li>В поле <b>Title</b> напиши имя проекта (например, Nyan Cat).</li>
+                    <li>Нажми <b style="color: #D97706; background: #FEF08A; padding: 2px 5px; border-radius: 4px;">желтую кнопку</b> <b>Save in browser</b>.</li>
+                </ol>
+            </div>
+            <div style="flex: 1.5; display: flex; justify-content: center;">
+                <img src="img/save_browser.png" alt="Скриншот Save in browser" style="width: 100%; max-height: 400px; object-fit: contain; border-radius: 8px;">
+            </div>
+        </div>
+    </div>
+
+    <div class="slide flex-center" id="slide-13">
+        <div class="badge red">Сохранение 2/2</div>
+        <h1 class="title-gradient" style="font-size: 3.5rem;">Сохраняем на компьютер</h1>
+        <p class="theory-text">Второй шаг — скачать файл-исходник к себе в папку.</p>
+        
+        <div class="info-card mt-10 w-100" style="display: flex; gap: 30px; align-items: center; padding: 20px; border-left: 8px solid #EF4444; background: #fff;">
+            <div style="flex: 1; text-align: left;">
+                <ol class="custom-list" style="font-size: 1.2rem; line-height: 1.6; margin-bottom: 15px;">
+                    <li>Снова нажми на иконку <b>Save</b>.</li>
+                    <li>Имя проекта в поле <b>Title</b> уже написано.</li>
+                    <li>Нажми кнопку <b>Save as .piskel</b>, чтобы скачать файл.</li>
+                </ol>
+                <div style="background: #FEF2F2; padding: 10px; border-radius: 8px; border: 1px solid #FCA5A5; text-align: center;">
+                    <p style="font-size: 1rem; margin: 0; color: #991B1B; font-weight: bold;">⚠️ Скачиваем именно .piskel, а не картинку PNG!</p>
+                </div>
+            </div>
+            <div style="flex: 1.5; display: flex; justify-content: center;">
+                <img src="img/save_computer.png" alt="Скриншот Save as .piskel" style="width: 100%; max-height: 400px; object-fit: contain; border-radius: 8px;">
+            </div>
+        </div>
+    </div>
+
+    <div class="slide flex-center" id="slide-14">
+        <div class="badge blue">Итоги</div>
+        <h1 class="title-gradient" style="font-size: 4rem;">Мы молодцы! 🎉</h1>
+        
+        <div class="info-card mt-20 w-100 text-left" style="padding: 30px 40px; border-left: 8px solid var(--accent-blue);">
+            <h3 style="font-size: 1.5rem; margin-bottom: 15px;">Наши достижения сегодня:</h3>
+            <ul class="custom-list" style="font-size: 1.2rem; line-height: 1.8; margin: 0;">
+                <li>✅ Вспомнили сочетания клавиш <b>Ctrl+Z</b> и <b>Shift</b>.</li>
+                <li>✅ Научились менять размер холста на <b>45x32</b>.</li>
+                <li>✅ Пошагово нарисовали сложного персонажа.</li>
+                <li>✅ Научились <b>надежно сохранять</b> проект в браузере и на компьютере!</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="slide flex-center" id="slide-15">
+        <div class="badge pink">Опрос</div>
+        <h1 class="title-gradient" style="font-size: 4rem;">Как твои успехи?</h1>
+        <p class="theory-text mt-10" style="font-size: 1.5rem;">Как прошел сегодняшний урок? Выбери свое настроение!</p>
+        
+        <div class="grid-cards mt-20 w-100" style="grid-template-columns: repeat(3, 1fr);">
+            <div class="info-card eq-card" style="border-top: 8px solid var(--accent-pink);">
+                <div style="font-size: 4rem; margin-bottom: 10px;">🤩</div>
+                <h3 style="font-size: 1.5rem; margin-bottom: 5px;">1. Супер!</h3>
+                <p style="font-size: 1.1rem; margin:0;">Кот получился идеальным!</p>
+            </div>
+            <div class="info-card eq-card" style="border-top: 8px solid var(--accent-blue);">
+                <div style="font-size: 4rem; margin-bottom: 10px;">🙂</div>
+                <h3 style="font-size: 1.5rem; margin-bottom: 5px;">2. Хорошо</h3>
+                <p style="font-size: 1.1rem; margin:0;">Было интересно рисовать.</p>
+            </div>
+            <div class="info-card eq-card" style="border-top: 8px solid var(--accent-yellow);">
+                <div style="font-size: 4rem; margin-bottom: 10px;">🤔</div>
+                <h3 style="font-size: 1.5rem; margin-bottom: 5px;">3. Сложно</h3>
+                <p style="font-size: 1.1rem; margin:0;">Пока путаюсь в пикселях.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="controls">
+        <button class="nav-btn" id="btn-prev" onclick="prevSlide()" disabled>◀ Назад</button>
+        <span id="slide-counter">1 / 15</span>
+        <button class="nav-btn" id="btn-next" onclick="nextSlide()">Дальше ▶</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
